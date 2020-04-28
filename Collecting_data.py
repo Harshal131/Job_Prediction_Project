@@ -5,4 +5,4 @@ path = "C:/Users/Harshal/PycharmProjects/Job_Prediction_Project/chromedriver"
 
 df = s.get_jobs('data scientist',800, False, path, 20)
 
-df.to_csv('glassdoor_jobs.csv', index = False)
+df.to_csv('scraped_jobs.csv', index = False)
