@@ -69,3 +69,15 @@ print('MAE for support vector regression >',mean_absolute_error(y_test,predictio
 #Random forest regression
 cross_val_score_rf=np.mean(cross_val_score(rf,x_train,y_train,scoring = 'neg_mean_absolute_error', cv= 4))
 print('MAE for random forest regression >',mean_absolute_error(y_test,tpred_rf))
+
+
+import pickle
+pickl = {'model': model.best_estimator_}
+pickle.dump( pickl, open( 'model_file' + ".p", "wb" ) )
+
+file_name = "model_file.p"
+with open(file_name, 'rb') as pickled:
+    data = pickle.load(pickled)
+    model = data['model']
+
+print(model.predict(np.array(list(x_test.iloc[1,:])).reshape(1,-1))[0])
