@@ -1,5 +1,8 @@
 # Job_Prediction_Project
 
+
+## Project Overview
+
  * Scrapped 800 job descriptions from glassdoor using python and selenium.
 
  * Created a tool that estimates salaries of data scientists to help them to negotiate their salaries with
